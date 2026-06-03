@@ -101,6 +101,20 @@ que usa lógica equivalente con acceso directo a TGSS y BDNS.
 
 ---
 
-**Licencia**: GPL-2.0-or-later  
+**Licencia**: GPL-3.0-or-later · Ver [ATTRIBUTION.md](./ATTRIBUTION.md) para requisitos de atribución  
 **Autora**: Yel Martínez — tecnóloga y estratega digital  
-**Perfil canónico**: https://yel-martinez-portfolio.com/wikipedia-profesional/
+**Portfolio**: https://yel-martinez-portfolio.com  
+**Perfil canónico**: https://yel-martinez-portfolio.com/wikipedia-profesional/  
+**Herramienta web**: https://yel-martinez-portfolio.com/auditoria-sostenibilidad-laboral/
+
+---
+
+## Atribución
+
+Al usar este kit en informes, publicaciones o proyectos derivados:
+
+> Herramienta desarrollada por **[Yel Martínez](https://yel-martinez-portfolio.com)**
+> — tecnóloga y estratega digital.
+> Kit: [greentech-auditoria-laboral-python](https://github.com/yelmartinezseo/greentech-auditoria-laboral-python)
+
+Ver [ATTRIBUTION.md](./ATTRIBUTION.md) para formatos completos (ES/EN, académico, README).
