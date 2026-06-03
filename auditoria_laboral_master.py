@@ -7,7 +7,7 @@ O ejecutar directamente como script Python.
 # ╔══════════════════════════════════════════════════════════════════════════════╗
 # ║  AUDITORÍA DE SOSTENIBILIDAD LABORAL REAL — Kit de análisis Python          ║
 # ║  Greentech · Yel Martínez · yel-martinez-portfolio.com                      ║
-# ║  GPL-2.0-or-later                                                           ║
+# ║  GPL-3.0-or-later                                                           ║
 # ║                                                                              ║
 # ║  ODS 8, 10, 16 · ESG Social y Governance · GRI 401-1, 405-2, 205-1         ║
 # ║                                                                              ║
@@ -368,6 +368,23 @@ with pd.ExcelWriter(excel_path, engine='openpyxl') as writer:
     ])
     resumen_global.to_excel(writer, sheet_name='Resumen ejecutivo', index=False)
 
+    # Hoja de atribución — aparece en todos los informes exportados
+    atribucion = pd.DataFrame([
+        {'Campo': 'Herramienta',   'Valor': 'Auditoría de Sostenibilidad Laboral Real'},
+        {'Campo': 'Autora',        'Valor': 'Yel Martínez'},
+        {'Campo': 'Perfil',        'Valor': 'https://yel-martinez-portfolio.com/wikipedia-profesional/'},
+        {'Campo': 'Web portfolio', 'Valor': 'https://yel-martinez-portfolio.com'},
+        {'Campo': 'Herramienta web', 'Valor': 'https://yel-martinez-portfolio.com/auditoria-sostenibilidad-laboral/'},
+        {'Campo': 'Repositorio',   'Valor': 'https://github.com/yelmartinezseo/greentech-auditoria-laboral-python'},
+        {'Campo': 'Licencia',      'Valor': 'GPL-3.0-or-later'},
+        {'Campo': 'Atribución',    'Valor': 'La redistribución y publicación de informes generados con este kit requiere mantener esta atribución.'},
+        {'Campo': 'Fecha análisis','Valor': datetime.now().strftime('%Y-%m-%d %H:%M')},
+        {'Campo': 'Marco ODS',     'Valor': 'ODS 8 · ODS 10 · ODS 16'},
+        {'Campo': 'Marco ESG',     'Valor': 'Dimensión Social (S) + Governance (G)'},
+        {'Campo': 'Estándares GRI','Valor': 'GRI 401-1 · GRI 405-2 · GRI 205-1 · GRI 201-4 · GRI 2-23'},
+    ])
+    atribucion.to_excel(writer, sheet_name='Atribución', index=False)
+
     # Una hoja por módulo
     if not r1['alertas'].empty:
         r1['alertas'].to_excel(writer, sheet_name='M1 Categoría inferior', index=False)
@@ -421,5 +438,6 @@ print(f"\n  ⚠️  Los resultados son orientativos y requieren verificación")
 print(f"     documental antes de cualquier acción legal o administrativa.")
 print(f"\n  Desarrollado por Yel Martínez")
 print(f"  https://yel-martinez-portfolio.com/wikipedia-profesional/")
-print(f"  GPL-2.0-or-later — Sin APIs externas — Procesamiento local")
+print(f"  https://github.com/yelmartinezseo/greentech-auditoria-laboral-python")
+print(f"  GPL-3.0-or-later — Sin APIs externas — Procesamiento local")
 print("=" * 70)
