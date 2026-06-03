@@ -4,7 +4,9 @@ Cruce fechas alta/baja Seguridad Social vs calendario de subvenciones
 (patrón Labora/SEPE: extinción sistemática justo al vencer obligatoriedad)
 
 Autor: Yel Martínez — https://yel-martinez-portfolio.com
-Licencia: GPL-2.0-or-later
+Kit: https://github.com/yelmartinezseo/greentech-auditoria-laboral-python
+Licencia: GPL-3.0-or-later
+Atribución requerida: ver ATTRIBUTION.md
 ODS: 16 | ESG: Governance G | GRI: 205-1, 201-4
 
 Fuentes de entrada esperadas:

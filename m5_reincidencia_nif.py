@@ -5,7 +5,9 @@ Reincidencia sistemática en convocatorias de empleo por el mismo NIF empresa
 no como ayuda puntual de inserción)
 
 Autor: Yel Martínez — https://yel-martinez-portfolio.com
-Licencia: GPL-2.0-or-later
+Kit: https://github.com/yelmartinezseo/greentech-auditoria-laboral-python
+Licencia: GPL-3.0-or-later
+Atribución requerida: ver ATTRIBUTION.md
 ODS: 16, 8 | ESG: Governance G | GRI: 205-1, 201-4
 
 Fuentes de entrada esperadas:

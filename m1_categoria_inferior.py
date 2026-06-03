@@ -4,7 +4,9 @@ Detección de concentración de categoría profesional inferior a funciones real
 (patrón: auxiliar→técnico, administrativo→gestor, etc.)
 
 Autor: Yel Martínez — https://yel-martinez-portfolio.com
-Licencia: GPL-2.0-or-later
+Kit: https://github.com/yelmartinezseo/greentech-auditoria-laboral-python
+Licencia: GPL-3.0-or-later
+Atribución requerida: ver ATTRIBUTION.md
 ODS: 8, 10 | ESG: Social S | GRI: 405-2, 401-1
 
 Fuentes de entrada esperadas:

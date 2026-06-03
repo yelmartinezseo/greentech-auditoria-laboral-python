@@ -4,7 +4,9 @@ Detección de familiares del titular/administrador contratados
 en coincidencia temporal con picos de subvención
 
 Autor: Yel Martínez — https://yel-martinez-portfolio.com
-Licencia: GPL-2.0-or-later
+Kit: https://github.com/yelmartinezseo/greentech-auditoria-laboral-python
+Licencia: GPL-3.0-or-later
+Atribución requerida: ver ATTRIBUTION.md
 ODS: 16 | ESG: Governance G | GRI: 205-1, 2-23
 
 Fuentes de entrada esperadas:
