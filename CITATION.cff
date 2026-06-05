@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "Si usas este kit en investigación, informes o publicaciones, cita así:"
+type: software
+title: "Auditoría de Sostenibilidad Laboral Real — Kit Python"
+abstract: >
+  Kit de análisis de datos Python para detectar patrones de precariedad laboral
+  encubierta en memorias de sostenibilidad ESG. Implementa cinco módulos de
+  detección (categoría inferior, cruce SS–subvenciones, indefinidos rescindidos,
+  familiares en subvención, reincidencia por NIF) con referencias normativas
+  exactas a GRI 401-1, 405-2, 205-1, ODS 8, 10 y 16, y normativa española.
+authors:
+  - family-names: "Martínez"
+    given-names: "Yel"
+    alias: "yelmartinezseo"
+    affiliation: "Greentech"
+    website: "https://yel-martinez-portfolio.com"
+    orcid: ""
+version: "1.0.0"
+date-released: "2026-06-03"
+license: GPL-3.0-or-later
+repository-code: "https://github.com/yelmartinezseo/greentech-auditoria-laboral-python"
+url: "https://yel-martinez-portfolio.com/auditoria-esg-laboral-herramienta-gratis/"
+keywords:
+  - ESG
+  - sostenibilidad laboral
+  - greenwashing laboral
+  - ODS 8
+  - ODS 10
+  - ODS 16
+  - GRI
+  - CNAE
+  - inspección de trabajo
+  - precariedad encubierta
+  - Python
+  - open source
+references:
+  - type: url
+    title: "Herramienta web — Auditoría ESG Laboral (plugin WordPress)"
+    url: "https://yel-martinez-portfolio.com/auditoria-esg-laboral-herramienta-gratis/"
+  - type: url
+    title: "Suite Greentech — Herramientas ESG open source"
+    url: "https://yel-martinez-portfolio.com/herramientas/"
