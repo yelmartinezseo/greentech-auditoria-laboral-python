@@ -25,11 +25,11 @@ warnings.filterwarnings('ignore')
 
 # ── Constantes de detección ────────────────────────────────────────────────────
 # Ventana de días antes/después del vencimiento de obligatoriedad
-# en la que una baja se considera sospechosa
-VENTANA_SOSPECHA_DIAS = 45
+# en la que una baja se marca para revisión
+VENTANA_REVISION_DIAS = 45
 
 # Causas de baja que pueden enmascarar un despido encubierto
-CAUSAS_SOSPECHOSAS = [
+CAUSAS_A_REVISAR = [
     'baja voluntaria', 'mutuo acuerdo', 'fin de contrato',
     'no superación periodo de prueba', 'dimisión'
 ]
@@ -47,10 +47,10 @@ def _dias_hasta_vencimiento(fecha_baja, fecha_inicio_obligacion, meses_oblig):
 def analizar_cruce_ss_subvenciones(
     df_contratos: pd.DataFrame,
     df_subvenciones: pd.DataFrame,
-    ventana_dias: int = VENTANA_SOSPECHA_DIAS
+    ventana_dias: int = VENTANA_REVISION_DIAS
 ) -> dict:
     """
-    Detecta bajas en Seguridad Social que coinciden sospechosamente
+    Detecta bajas en Seguridad Social que coinciden en el tiempo
     con el fin del período de obligatoriedad de mantenimiento del empleo
     vinculado a subvenciones públicas.
 
@@ -63,7 +63,7 @@ def analizar_cruce_ss_subvenciones(
         Subvenciones concedidas con: NIF_empresa, convocatoria, organismo,
         fecha_resolucion, importe, meses_obligatoriedad, NIF_trabajador_vinculado
     ventana_dias : int
-        Días de margen para considerar una baja como sospechosa respecto
+        Días de margen para marcar una baja para revisión respecto
         al vencimiento de obligatoriedad. Default: 45 días.
 
     Retorna
@@ -99,7 +99,7 @@ def analizar_cruce_ss_subvenciones(
             fecha_inicio = subv['fecha_resolucion']
             vencimiento = fecha_inicio + relativedelta(months=int(meses))
 
-            # Bajas en ventana sospechosa alrededor del vencimiento
+            # Bajas en ventana de revisión alrededor del vencimiento
             ventana_inicio = vencimiento - pd.Timedelta(days=ventana_dias)
             ventana_fin = vencimiento + pd.Timedelta(days=ventana_dias)
 
@@ -122,7 +122,7 @@ def analizar_cruce_ss_subvenciones(
             for _, baja in bajas_ventana.iterrows():
                 dias_diff = (baja['fecha_baja'] - vencimiento).days
                 causa = str(baja.get('causa_baja', '')).lower()
-                es_causa_sospechosa = any(c in causa for c in CAUSAS_SOSPECHOSAS)
+                es_causa_a_revisar = any(c in causa for c in CAUSAS_A_REVISAR)
 
                 alertas.append({
                     'NIF_empresa': nif_empresa,
@@ -137,7 +137,7 @@ def analizar_cruce_ss_subvenciones(
                     'meses_obligatoriedad': meses,
                     'vencimiento_obligacion': vencimiento.date(),
                     'dias_hasta_vencimiento': dias_diff,
-                    'causa_sospechosa': es_causa_sospechosa,
+                    'causa_a_revisar': es_causa_a_revisar,
                     'nivel_alerta': 'CRÍTICO' if abs(dias_diff) <= 15 else 'ALTO',
                     'tipo_alerta': 'Baja en ventana de obligatoriedad',
                     'normativa': 'Ley 38/2003 General de Subvenciones · GRI 205-1 · ODS 16',
@@ -145,7 +145,7 @@ def analizar_cruce_ss_subvenciones(
                         f"Baja {dias_diff:+d} días respecto al vencimiento de obligatoriedad "
                         f"de '{subv.get('convocatoria', '')}' ({organismo_str(subv)}). "
                         f"Subvención: {subv.get('importe', 0):,.0f}€. "
-                        f"{'⚠️ Causa sospechosa: ' + baja.get('causa_baja','') if es_causa_sospechosa else ''}"
+                        f"{'⚠️ Causa a revisar: ' + baja.get('causa_baja','') if es_causa_a_revisar else ''}"
                     )
                 })
 
@@ -178,7 +178,7 @@ def analizar_cruce_ss_subvenciones(
         'total_bajas_analizadas': total_bajas,
         'alertas_en_ventana_obligatoriedad': n_alertas,
         'alertas_criticas_15dias': n_criticas,
-        'empresas_con_patron_sospechoso': n_empresas_alertadas,
+        'empresas_con_patron_a_revisar': n_empresas_alertadas,
         'empresas_reincidentes_misma_convocatoria': len(reincidentes),
         'importe_subvenciones_en_riesgo_eur': round(importe_riesgo, 2),
         'puntuacion_riesgo': puntuacion,

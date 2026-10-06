@@ -193,11 +193,11 @@ if not r3['alertas'].empty:
         print(f"    ⚠️  {row.get('descripcion','')[:120]}...")
 
 # ══════════════════════════════════════════════════════════════════════════════
-# MÓDULO 4 — Familiares en picos de subvención
+# MÓDULO 4 — Posibles vínculos familiares en picos de subvención
 # ══════════════════════════════════════════════════════════════════════════════
 
 print("\n" + "─" * 70)
-print("  MÓDULO 4: Detección de familiares contratados en picos de subvención")
+print("  MÓDULO 4: Posibles vínculos familiares en contrataciones durante picos de subvención")
 print("  ODS 16 | GRI 205-1 | Ley 38/2003 art. 31")
 print("  ⚠️  Señal de alerta inicial — requiere verificación manual")
 print("─" * 70)
@@ -228,7 +228,7 @@ print("  MÓDULO 5: Reincidencia sistemática en convocatorias por NIF empresa")
 print("  ODS 16, 8 | GRI 205-1 | Ley 38/2003")
 print("─" * 70)
 
-r5 = analizar_reincidencia_nif(df_subvenciones_m5, df_plantilla)
+r5 = analizar_reincidencia_nif(df_subvenciones_m5, df_plantilla_m4)
 res5 = r5['resumen']
 
 print(f"\n  Empresas analizadas           : {res5['total_empresas_analizadas']}")
@@ -357,7 +357,7 @@ with pd.ExcelWriter(excel_path, engine='openpyxl') as writer:
          'Alertas': res3['rescindidos_antes_plazo'],
          'Riesgo (0-100)': res3['puntuacion_riesgo'],
          'ODS': 'ODS 8, 16', 'GRI': 'GRI 401-1, 205-1'},
-        {'Módulo': 'M4 — Familiares en picos subvención',
+        {'Módulo': 'M4 — Vínculos familiares en picos de subvención (a revisar)',
          'Alertas': res4['alertas_posible_familiar'],
          'Riesgo (0-100)': res4['puntuacion_riesgo'],
          'ODS': 'ODS 16', 'GRI': 'GRI 205-1'},

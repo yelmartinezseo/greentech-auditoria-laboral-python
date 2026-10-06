@@ -1,6 +1,6 @@
 """
 greentech_auditoria_laboral — Módulo 4
-Detección de familiares del titular/administrador contratados
+Posibles vínculos familiares con el titular/administrador en contrataciones
 en coincidencia temporal con picos de subvención
 
 Autor: Yel Martínez — https://yel-martinez-portfolio.com
@@ -33,7 +33,7 @@ warnings.filterwarnings('ignore')
 UMBRAL_SIMILITUD_APELLIDO = 0.88
 
 # Ventana temporal: días desde la resolución de subvención
-# en los que una contratación se considera sospechosa
+# en los que una contratación se marca para revisión
 VENTANA_CONTRATACION_DIAS = 90
 
 
@@ -104,7 +104,7 @@ def analizar_familiares_subvencion(
     df_plantilla : DataFrame con plantilla de trabajadores
     df_administradores : DataFrame con administradores/titulares por NIF empresa
     df_subvenciones : DataFrame con subvenciones concedidas
-    ventana_dias : días desde resolución para considerar contratación sospechosa
+    ventana_dias : días desde resolución para marcar la contratación para revisión
     umbral_similitud : similitud Jaro-Winkler mínima para marcar posible parentesco
 
     Retorna

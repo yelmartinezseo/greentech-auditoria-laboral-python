@@ -90,7 +90,8 @@ def analizar_reincidencia_nif(
 
         # Patrón 3: % de plantilla subvencionada
         pct_subvencionada = None
-        if df_plantilla is not None and n_puestos_total is not None:
+        if (df_plantilla is not None and 'NIF_empresa' in df_plantilla.columns
+                and n_puestos_total is not None):
             plantilla_nif = df_plantilla[df_plantilla['NIF_empresa'] == nif]
             if not plantilla_nif.empty:
                 total_empleados = len(plantilla_nif)

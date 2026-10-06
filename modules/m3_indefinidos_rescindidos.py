@@ -42,7 +42,7 @@ TIPOS_INDEFINIDO = [
     'contrato de trabajo indefinido'
 ]
 
-CAUSAS_SOSPECHOSAS_RESCISION = [
+CAUSAS_A_REVISAR_RESCISION = [
     'mutuo acuerdo', 'baja voluntaria', 'dimisión',
     'no superación periodo de prueba', 'fin relacion laboral',
     'acuerdo extinción'
@@ -135,9 +135,9 @@ def analizar_indefinidos_rescindidos(
     else:
         alertas['importe_bonificacion_cobrado'] = np.nan
 
-    # Causa sospechosa
-    alertas['causa_sospechosa'] = alertas['causa_baja'].apply(
-        lambda c: any(cs in str(c).lower() for cs in CAUSAS_SOSPECHOSAS_RESCISION)
+    # Causa a revisar
+    alertas['causa_a_revisar'] = alertas['causa_baja'].apply(
+        lambda c: any(cs in str(c).lower() for cs in CAUSAS_A_REVISAR_RESCISION)
         if pd.notna(c) else False
     )
 

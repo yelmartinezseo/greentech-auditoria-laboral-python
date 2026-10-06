@@ -2,10 +2,11 @@
 
 **Greentech · Yel Martínez · yel-martinez-portfolio.com**
 
-Kit de análisis de datos Python para detectar patrones de precariedad laboral
-encubierta en empresas con memorias de sostenibilidad. Complementa el
-[plugin WordPress](https://yel-martinez-portfolio.com/auditoria-sostenibilidad-laboral/)
-con análisis de datos reales aportados por el usuario.
+Kit de análisis de datos Python para que una organización revise sus propios
+datos de plantilla y subvenciones y detecte riesgos laborales a revisar.
+Complementa la
+[herramienta web de Auditoría ESG Laboral](https://yel-martinez-portfolio.com/recursos/auditoria-esg-laboral-herramienta-gratis/)
+con análisis de datos aportados por el propio usuario.
 
 ---
 
@@ -15,18 +16,23 @@ con análisis de datos reales aportados por el usuario.
 - **Sin APIs externas.** No consume OpenAI, Claude ni ningún servicio de pago.
 - **Sin telemetría.** No envía datos a ningún servidor.
 - **El usuario aporta sus datos.** Los CSVs son suyos, los procesa localmente.
+- **Úsalo con datos de tu organización o con autorización.** Los datos de personas
+  trabajadoras son datos personales (RGPD y LOPDGDD): el tratamiento es
+  responsabilidad de quien ejecuta el kit.
+- **Los resultados son indicios a revisar,** no acusaciones ni conclusiones
+  jurídicas. No constituye asesoramiento legal.
 
 ---
 
 ## Módulos incluidos
 
-| Módulo | Patrón detectado | ODS | GRI |
+| Módulo | Riesgo a revisar | ODS | GRI |
 |--------|-----------------|-----|-----|
 | `m1_categoria_inferior.py` | Categoría contractual inferior a funciones reales | 8, 10 | 405-2 |
-| `m2_cruce_ss_subvenciones.py` | Bajas SS coincidentes con vencimiento de obligatoriedad | 16 | 205-1 |
+| `m2_cruce_ss_subvenciones.py` | Bajas coincidentes con el vencimiento de obligaciones de mantenimiento de empleo | 16 | 205-1 |
 | `m3_indefinidos_rescindidos.py` | Indefinidos rescindidos antes del plazo de bonificación | 8, 16 | 401-1 |
-| `m4_familiares_subvencion.py` | Posibles familiares contratados en picos de subvención | 16 | 205-1 |
-| `m5_reincidencia_nif.py` | Dependencia estructural de subvenciones por NIF empresa | 16, 8 | 205-1 |
+| `m4_familiares_subvencion.py` | Posibles vínculos familiares con el titular o la administración en contrataciones durante picos de subvención (conflicto de interés a revisar) | 16 | 205-1 |
+| `m5_reincidencia_nif.py` | Dependencia de subvenciones de la propia organización, por NIF | 16, 8 | 205-1 |
 
 ---
 
@@ -86,18 +92,15 @@ Genera en `reports/`:
 - RD 901/2020 (Planes de Igualdad)
 - Reforma Laboral 2022 (RDL 32/2021)
 
-**Referencia técnica**: Herramienta *Maximiliano* (ITSS — Inspección de Trabajo)
-que usa lógica equivalente con acceso directo a TGSS y BDNS.
-
 ---
 
 ## Suite completa de herramientas ESG — Greentech
 
-- [Plugin WordPress — Auditoría Laboral](https://yel-martinez-portfolio.com/auditoria-sostenibilidad-laboral/)
-- [Diagnóstico ESG](https://yel-martinez-portfolio.com/herramienta-de-diagnostico-esg-para-pymes/)
-- [Calculadora huella de carbono](https://yel-martinez-portfolio.com/carbon-calculator/)
-- [Generador memoria GRI](https://yel-martinez-portfolio.com/generador-de-memoria-de-sostenibilidad-gri/)
-- [Auditoría greenwashing](https://yel-martinez-portfolio.com/greenwashing-auditoria-gratis-y-plantilla-descargable/)
+- [Auditoría ESG Laboral](https://yel-martinez-portfolio.com/recursos/auditoria-esg-laboral-herramienta-gratis/)
+- [Diagnóstico ESG](https://yel-martinez-portfolio.com/recursos/diagnostico-esg-gratuito-para-pymes-evalua-tu-sostenibilidad-en-5-minutos/)
+- [Calculadora huella de carbono](https://yel-martinez-portfolio.com/recursos/carbon-calculator/)
+- [Generador memoria GRI](https://yel-martinez-portfolio.com/recursos/generador-de-memoria-de-sostenibilidad-gri/)
+- [Auditoría greenwashing](https://yel-martinez-portfolio.com/recursos/greenwashing-auditoria-gratis-y-plantilla-descargable/)
 
 ---
 
@@ -105,7 +108,7 @@ que usa lógica equivalente con acceso directo a TGSS y BDNS.
 **Autora**: Yel Martínez — tecnóloga y estratega digital  
 **Portfolio**: https://yel-martinez-portfolio.com  
 **Perfil canónico**: https://yel-martinez-portfolio.com/wikipedia-profesional/  
-**Herramienta web**: https://yel-martinez-portfolio.com/auditoria-sostenibilidad-laboral/
+**Herramienta web**: https://yel-martinez-portfolio.com/recursos/auditoria-esg-laboral-herramienta-gratis/
 
 ---
 

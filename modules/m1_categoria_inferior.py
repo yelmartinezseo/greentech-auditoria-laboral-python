@@ -107,7 +107,7 @@ def analizar_categoria_inferior(
     Retorna
     -------
     dict con:
-        - alertas: DataFrame con casos sospechosos
+        - alertas: DataFrame con casos a revisar
         - resumen: dict con métricas clave
         - puntuacion_riesgo: float 0-100
     """

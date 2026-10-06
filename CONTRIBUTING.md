@@ -3,7 +3,7 @@
 **Greentech · Yel Martínez · yel-martinez-portfolio.com**
 
 Gracias por tu interés en mejorar este kit. Cualquier contribución que refuerce
-la detección de patrones de precariedad laboral encubierta es bienvenida.
+el análisis de riesgos laborales a revisar es bienvenido.
 
 ---
 

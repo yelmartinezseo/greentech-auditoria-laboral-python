@@ -1,7 +1,7 @@
 # Estructura de archivos CSV de entrada
 
 Greentech · Auditoría de Sostenibilidad Laboral Real — Kit Python
-Yel Martínez · yel-martinez-portfolio.com · GPL-2.0-or-later
+Yel Martínez · yel-martinez-portfolio.com · GPL-3.0-or-later
 
 ---
 
@@ -123,4 +123,4 @@ que el usuario legalmente tiene disponibles.
 ---
 
 Desarrollado por Yel Martínez — https://yel-martinez-portfolio.com
-GPL-2.0-or-later — Procesamiento 100% local — Sin APIs externas
+GPL-3.0-or-later — Procesamiento 100% local — Sin APIs externas
