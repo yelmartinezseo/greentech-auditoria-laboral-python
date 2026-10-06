@@ -28,7 +28,7 @@ warnings.filterwarnings('ignore')
 # en la que una baja se marca para revisión
 VENTANA_REVISION_DIAS = 45
 
-# Causas de baja que pueden enmascarar un despido encubierto
+# Causas de baja que conviene revisar junto a las fechas de las subvenciones
 CAUSAS_A_REVISAR = [
     'baja voluntaria', 'mutuo acuerdo', 'fin de contrato',
     'no superación periodo de prueba', 'dimisión'
@@ -50,7 +50,7 @@ def analizar_cruce_ss_subvenciones(
     ventana_dias: int = VENTANA_REVISION_DIAS
 ) -> dict:
     """
-    Detecta bajas en Seguridad Social que coinciden en el tiempo
+    Señala bajas en Seguridad Social que coinciden en el tiempo
     con el fin del período de obligatoriedad de mantenimiento del empleo
     vinculado a subvenciones públicas.
 

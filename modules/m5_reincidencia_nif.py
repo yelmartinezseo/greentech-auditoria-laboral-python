@@ -33,7 +33,7 @@ def analizar_reincidencia_nif(
     df_plantilla: pd.DataFrame = None
 ) -> dict:
     """
-    Detecta empresas (NIF) que muestran dependencia estructural de
+    Señala NIF que muestran dependencia estructural de
     subvenciones de empleo, identificando:
     1. Reincidencia en la misma convocatoria (mismo programa, varios años)
     2. Dependencia continua (subvenciones en 3+ años consecutivos)

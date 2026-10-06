@@ -91,7 +91,7 @@ def analizar_familiares_subvencion(
     umbral_similitud: float = UMBRAL_SIMILITUD_APELLIDO
 ) -> dict:
     """
-    Detecta trabajadores cuyos apellidos coinciden fonéticamente con los
+    Señala trabajadores cuyos apellidos coinciden fonéticamente con los
     del administrador/titular de la empresa, contratados en los 90 días
     siguientes a la resolución de una subvención.
 

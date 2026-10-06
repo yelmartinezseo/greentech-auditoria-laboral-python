@@ -35,7 +35,7 @@ from m3_indefinidos_rescindidos import analizar_indefinidos_rescindidos, generar
 from m4_familiares_subvencion   import analizar_familiares_subvencion, generar_csvs_ejemplo as gen_m4
 from m5_reincidencia_nif        import analizar_reincidencia_nif, generar_csv_ejemplo as gen_m5
 
-# ── Paleta Marina Vibrante (coherente con plugin WordPress) ──────────────────
+# ── Paleta Marina Vibrante (coherente con la herramienta web) ──────────────────
 COLORES = {
     'navy':     '#122633',
     'blue':     '#155C8E',

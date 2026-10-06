@@ -76,7 +76,7 @@ def analizar_indefinidos_rescindidos(
     df_contratos: pd.DataFrame
 ) -> dict:
     """
-    Detecta contratos indefinidos (especialmente bonificados) que fueron
+    Señala contratos indefinidos (especialmente bonificados) que fueron
     rescindidos antes del plazo mínimo de mantenimiento obligatorio,
     lo que puede implicar reintegro de bonificaciones y sanción.
 

@@ -47,8 +47,8 @@ https://github.com/yelmartinezseo/greentech-auditoria-laboral-python
 |---------|-----|
 | Portfolio profesional | https://yel-martinez-portfolio.com |
 | Perfil y trayectoria | https://yel-martinez-portfolio.com/wikipedia-profesional/ |
-| Herramienta web (plugin WordPress) | https://yel-martinez-portfolio.com/auditoria-sostenibilidad-laboral/ |
-| Suite ESG completa | https://yel-martinez-portfolio.com/herramientas/ |
+| Herramienta web | https://yel-martinez-portfolio.com/recursos/auditoria-esg-laboral-herramienta-gratis/ |
+| Suite ESG completa | https://yel-martinez-portfolio.com/herramientas-open-source/ |
 | Repositorio GitHub | https://github.com/yelmartinezseo/greentech-auditoria-laboral-python |
 
 ---

@@ -91,7 +91,7 @@ def analizar_categoria_inferior(
     df_convenio: pd.DataFrame = None
 ) -> dict:
     """
-    Detecta trabajadores cuya categoría contractual es inferior al grupo
+    Señala trabajadores cuya categoría contractual es inferior al grupo
     profesional que sugieren sus funciones reales o su salario.
 
     Parámetros
