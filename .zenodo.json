@@ -1,0 +1,34 @@
+{
+  "title": "Auditoría ESG Laboral — kit Python",
+  "upload_type": "software",
+  "description": "Kit de análisis de datos en Python para que una organización revise sus propios datos de plantilla y subvenciones y detecte riesgos laborales a revisar. Cinco módulos con referencias a GRI 401-1, 405-2 y 205-1, ODS 8, 10 y 16 y normativa española. Los resultados son indicios a revisar, no conclusiones jurídicas.",
+  "creators": [
+    {
+      "name": "Martínez, Yel",
+      "orcid": "0009-0003-0219-7265"
+    }
+  ],
+  "license": "gpl-3.0-or-later",
+  "keywords": [
+    "ESG",
+    "sostenibilidad laboral",
+    "Python",
+    "GRI",
+    "ODS 8",
+    "auditoría"
+  ],
+  "language": "spa",
+  "related_identifiers": [
+    {
+      "identifier": "https://yel-martinez-portfolio.com/recursos/auditoria-esg-laboral-herramienta-gratis/",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-other",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/yelmartinezseo/greentech-auditoria-laboral-python",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
