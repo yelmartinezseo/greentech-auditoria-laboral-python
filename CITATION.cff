@@ -17,8 +17,11 @@ authors:
     affiliation: "Greentech"
     website: "https://yel-martinez-portfolio.com"
     orcid: "https://orcid.org/0009-0003-0219-7265"
-version: "1.0.0"
-date-released: "2026-06-03"
+doi: "10.5281/zenodo.22770572"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22770572"
+    description: "DOI de concepto en Zenodo (todas las versiones)"
 license: GPL-3.0-or-later
 repository-code: "https://github.com/yelmartinezseo/greentech-auditoria-laboral-python"
 url: "https://yel-martinez-portfolio.com/recursos/auditoria-esg-laboral-herramienta-gratis/"
